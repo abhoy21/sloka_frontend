@@ -97,11 +97,11 @@ const Header = () => {
         scrolled && "border-b shadow-md"
       )}
     >
-      <div className="flex items-center mx-2">
+      <div className="hidden md:flex items-center mx-2">
         <Logo />
       </div>
 
-      <div className="flex flex-grow items-center mx-2 md:mx-5 px-2 md:px-5 py-2 md:py-4 bg-gray-100 dark:bg-[#2f2f2f] text-gray-600 dark:text-[#f8f9fa] rounded-xl focus-within:shadow-md">
+      <div className="flex flex-grow items-center mx-0 md:mx-5 px-2 md:px-5 py-2 md:py-4 bg-gray-100 dark:bg-[#2f2f2f] text-gray-600 dark:text-[#f8f9fa] rounded-xl focus-within:shadow-md">
         <Button variant="ghost" onSubmit={handleSearch}>
           <Search color="gold" className="hidden dark:inline-flex" />
           <Search color="blue" className="dark:hidden" />
@@ -115,7 +115,7 @@ const Header = () => {
         />
       </div>
 
-      <div>
+      <div className="hidden md:flex">
         <ModeToggle />
       </div>
       <div className="mx-2 md:mx-4 flex items-center">
