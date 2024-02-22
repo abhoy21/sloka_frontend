@@ -147,7 +147,7 @@ const Each_Doc_Row_Component = () => {
             <p className="flex-grow pl-5 w-12 pr-12 truncate  text-base text-black dark:text-white">
               {document.title}
             </p>
-            <p className="pr-5 text-lg">
+            <p className="hidden md:flex pr-5 text-lg">
               {selectedDocumentId === document.id
                 ? document.updated_at
                 : document.created_at}
