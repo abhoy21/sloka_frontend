@@ -173,7 +173,7 @@ const EditorComponent = () => {
   };
   useEffect(() => {
     fetchDocumentContent();
-  }, [params.documentid]);
+  }, [params.documentid, fetchDocumentContent]);
 
   const [editorHtml, setEditorHtml] = useState("");
   useEffect(() => {

@@ -134,7 +134,7 @@ const EditorComponent: React.FC = () => {
       setTitle(title);
       setEditorHtml(content);
       if (viewedit !== undefined) {
-        setViewEditBoolean(viewedit); // Set vieweditboolean state
+        setViewEditBoolean(viewedit);
       }
     } catch (error) {
       console.error("Error fetching document:", error);
@@ -143,7 +143,7 @@ const EditorComponent: React.FC = () => {
 
   useEffect(() => {
     fetchDocumentContent();
-  }, [params.documentid]);
+  }, [params.documentid, fetchDocumentContent]);
 
   const [editorHtml, setEditorHtml] = useState("");
   useEffect(() => {
