@@ -3,9 +3,9 @@ import { Toaster } from "@/components/ui/toaster";
 
 const HomeLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="min-w-full dark:bg-[#1F1F1F]">
+    <div className="h-full w-screen overflow-x-hidden dark:bg-[#1F1F1F]">
       <Header />
-      <main className="pt-16">{children}</main>
+      <main className="h-screen overflow-y-auto pt-16">{children}</main>
       <Toaster />
     </div>
   );

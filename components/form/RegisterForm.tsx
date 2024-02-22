@@ -128,7 +128,7 @@ const RegistrationForm = () => {
           </p>
 
           <form className="space-y-8" onSubmit={handleSubmit}>
-            <div className="flex space-x-8 pt-8">
+            <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
               <div className="flex flex-grow items-center px-5 py-4 bg-[#F8F4FF] shadow-md dark:bg-[#2f2f2f] text-gray-600 rounded-xl focus-within:text-gray-600 focus-within:shadow-lg">
                 <input
                   type="text"

@@ -1,12 +1,16 @@
 import { Toaster } from "@/components/ui/toaster";
+
 const AuthLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="h-screen flex bg-[#f8f9fa]  dark:bg-[#1F1F1F]">
-      <h1 className="absolute left-[40%] top-20 text-5xl items justify-center">
-        Welcome to <span className="font-extrabold">Sloka</span>
+    <div className="h-screen w-screen flex flex-col bg-[#1F1F1F] overflow-x-hidden">
+      <h1 className="text-3xl md:text-5xl font-extrabold text-center text-white mt-10 md:mt-10">
+        Welcome to Sloka
       </h1>
 
-      <div className="flex items-center justify-center w-full">{children}</div>
+      <div className="flex items-center justify-center flex-grow">
+        {children}
+      </div>
+
       <Toaster />
     </div>
   );

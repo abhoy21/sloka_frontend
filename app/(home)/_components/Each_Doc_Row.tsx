@@ -128,7 +128,7 @@ const Each_Doc_Row_Component = () => {
       {documents.map((document) => (
         <div
           key={document.id}
-          className={`flex items-center justify-between py-4 pl-4 rounded-xl hover:bg-gray-100 ease-in-out duration-300 text-gray-700 dark:text-gray-500 dark:hover:bg-[#2f2f2f] cursor-pointer text-md ${
+          className={`overflow-y-auto flex items-center justify-between py-4 pl-4 rounded-xl hover:bg-gray-100 ease-in-out duration-300 text-gray-700 dark:text-gray-500 dark:hover:bg-[#2f2f2f] cursor-pointer text-md ${
             selectedDocumentId === document.id ? "bg-blue-200" : ""
           }`}
         >
