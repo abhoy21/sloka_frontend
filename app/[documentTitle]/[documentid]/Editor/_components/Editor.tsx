@@ -212,11 +212,11 @@ const EditorComponent = () => {
   return (
     <div>
       <header className="flex justify-between items-center p-3 pb-4">
-        <span>
+        <span className="flex items-center mx-2">
           <Logo />
         </span>
         <div className="flex-grow px-2">
-          <div className="flex flex-grow items-center px-5 py-4 bg-gray-100 dark:bg-[#1f1f1f] text-gray-600 dark:text-[#f8f9fa] rounded-xl focus-within:shadow-md">
+          <div className="flex flex-grow items-center md:mx-2 md:px-5 py-2 md:py-4 bg-gray-100 dark:bg-[#1f1f1f] text-gray-600 dark:text-[#f8f9fa] rounded-xl focus-within:shadow-md">
             <input
               value={title}
               onChange={handleTitleChange}
@@ -226,7 +226,7 @@ const EditorComponent = () => {
                   handleSave();
                 }
               }}
-              className="flex-grow px-5 text-3xl font-bold bg-transparent outline-none"
+              className="w-[4rem] md:px-5 text-md md:text-3xl font-bold bg-transparent outline-none"
             />
           </div>
 
@@ -263,12 +263,12 @@ const EditorComponent = () => {
             <DialogTrigger asChild>
               <Button
                 size="lg"
-                className="py-6 rounded-xl bg-blue-700 dark:bg-yellow-500 dark:border-gray-700 mx-4 hover:bg-blue-500 dark:hover:bg-yellow-700 ease-linear duration-300"
+                className="py-2 md:py-6 rounded-xl bg-blue-700 dark:bg-yellow-500 dark:border-gray-700 md:mx-4 hover:bg-blue-500 dark:hover:bg-yellow-700 ease-linear duration-300"
               >
-                <span className="text-lg text-[#f8f9fa] dark:text-[#2f2f2f]">
+                <span className="hidden md:block text-lg text-[#f8f9fa] dark:text-[#2f2f2f]">
                   Share
                 </span>
-                <Share className="ml-4 h-5 w-5" />
+                <Share className="md:ml-4 h-5 w-5 " />
               </Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-md">
@@ -311,7 +311,7 @@ const EditorComponent = () => {
           </Dialog>
         </div>
 
-        <div>
+        <div className="hidden md:flex">
           <ModeToggle />
         </div>
         <div className="mx-4 flex items-center">
@@ -320,7 +320,7 @@ const EditorComponent = () => {
           </Avatar>
         </div>
       </header>
-      <div className="flex justify-center sticky top-0 z-50 mx-auto py-16 h-screen">
+      <div className="flex justify-center sticky top-0 z-50 mx-auto py-16 h-screen overflow-y-auto">
         <div
           className="w-full lg:w-4/5 bg-[#f8f9fa] dark:bg-[#1f1f1f]"
           tabIndex={0}

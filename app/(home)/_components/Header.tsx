@@ -97,7 +97,7 @@ const Header = () => {
         scrolled && "border-b shadow-md"
       )}
     >
-      <div className="hidden md:flex items-center mx-2">
+      <div className="flex items-center mx-2">
         <Logo />
       </div>
 
@@ -111,7 +111,7 @@ const Header = () => {
           placeholder="Search..."
           onChange={(e) => setDocid(e.target.value)}
           onKeyDown={handleKeyPress}
-          className="flex-grow px-2 md:px-5 text-sm md:text-base bg-transparent outline-none"
+          className="w-[8rem] md:flex-grow px-2 md:px-5 text-sm md:text-base bg-transparent outline-none"
         />
       </div>
 
