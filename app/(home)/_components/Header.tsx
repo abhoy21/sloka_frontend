@@ -93,13 +93,15 @@ const Header = () => {
   return (
     <div
       className={cn(
-        "sticky top-0 z-50 flex items-center bg-background dark:bg-[#1F1F1F] px-4 py-2 shadow-sm",
+        "sticky top-0 z-50 flex items-center bg-background dark:bg-[#1F1F1F] px-2 md:px-4 py-2 shadow-sm",
         scrolled && "border-b shadow-md"
       )}
     >
-      <Logo />
+      <div className="flex items-center mx-2">
+        <Logo />
+      </div>
 
-      <div className="flex flex-grow items-center mx-5 md:mx-20 px-5 py-4 bg-gray-100 dark:bg-[#2f2f2f] text-gray-600 dark:text-[#f8f9fa] rounded-xl focus-within:shadow-md">
+      <div className="flex flex-grow items-center mx-2 md:mx-5 px-2 md:px-5 py-2 md:py-4 bg-gray-100 dark:bg-[#2f2f2f] text-gray-600 dark:text-[#f8f9fa] rounded-xl focus-within:shadow-md">
         <Button variant="ghost" onSubmit={handleSearch}>
           <Search color="gold" className="hidden dark:inline-flex" />
           <Search color="blue" className="dark:hidden" />
@@ -109,14 +111,14 @@ const Header = () => {
           placeholder="Search..."
           onChange={(e) => setDocid(e.target.value)}
           onKeyDown={handleKeyPress}
-          className="flex-grow px-5 text-base bg-transparent outline-none"
+          className="flex-grow px-2 md:px-5 text-sm md:text-base bg-transparent outline-none"
         />
       </div>
 
       <div>
         <ModeToggle />
       </div>
-      <div className="mx-4 flex items-center">
+      <div className="mx-2 md:mx-4 flex items-center">
         <Avatar className="cursor-pointer " onClick={handleLogout}>
           <AvatarImage src={avatarImageUrl} />
         </Avatar>
