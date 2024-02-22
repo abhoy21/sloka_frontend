@@ -93,7 +93,7 @@ const Header = () => {
   return (
     <div
       className={cn(
-        "sticky top-0 z-50 flex items-center justify-center bg-background dark:bg-[#1F1F1F] px-4 py-6 shadow-sm",
+        "sticky top-0 z-50 flex items-center bg-background dark:bg-[#1F1F1F] px-4 py-2 shadow-sm",
         scrolled && "border-b shadow-md"
       )}
     >

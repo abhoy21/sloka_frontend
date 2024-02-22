@@ -18,13 +18,13 @@ export const Logo = () => {
         <Image
           src={logo_img}
           height="40"
-          width="40"
+          width="20"
           alt="Logo"
           className="dark:hidden"
         />
         <Image
           height="40"
-          width="40"
+          width="20"
           src={logo_dark_img}
           alt="Logo"
           className="hidden dark:block"
