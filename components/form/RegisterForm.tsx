@@ -124,8 +124,9 @@ const RegistrationForm = () => {
             Create an Account
           </h2>
           <p className="text-gray-500 text-center text-base my-4">
-            If you don't have an account, please sign up below:
+            If you don&apos;t have an account, please sign up below:
           </p>
+
           <form className="space-y-8" onSubmit={handleSubmit}>
             <div className="flex space-x-8 pt-8">
               <div className="flex flex-grow items-center px-5 py-4 bg-[#F8F4FF] shadow-md dark:bg-[#2f2f2f] text-gray-600 rounded-xl focus-within:text-gray-600 focus-within:shadow-lg">

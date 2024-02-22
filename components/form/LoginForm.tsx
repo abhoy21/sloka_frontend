@@ -155,7 +155,7 @@ const LoginForm = (): JSX.Element => {
 
           <div className="mt-4 text-center">
             <p>
-              Don't have an account?{" "}
+              Don&apos;t have an account?{" "}
               <Link href="/register">
                 <span className="dark:text-yellow-500 text-blue-700 hover:underline">
                   Register
