@@ -188,6 +188,35 @@ const EditorComponent = () => {
     Quill.register(FontAttributor, true);
   }, []);
 
+  const handleEditorChange = (content: string) => {
+    setEditorHtml(content);
+    // Call save function here
+    saveEditorContent(content);
+    console.log("Save successfully");
+  };
+
+  const saveEditorContent = async (content: string) => {
+    try {
+      const token = localStorage.getItem("token");
+      const response = await axios.post(
+        "https://sloka-backend.onrender.com/api/editdoc",
+        {
+          id: parseInt(params.documentid),
+          title: title,
+          content: content,
+        },
+        {
+          headers: {
+            Authorization: `Token ${token}`,
+          },
+        }
+      );
+      console.log(response.data);
+    } catch (error) {
+      console.error("Error saving document:", error);
+    }
+  };
+
   var toolbarOptions = [
     ["bold", "italic", "underline", "strike"], // toggled buttons
     ["blockquote", "code-block"],
@@ -334,7 +363,7 @@ const EditorComponent = () => {
           <ReactQuill
             modules={{ toolbar: toolbarOptions }}
             value={editorHtml}
-            onChange={setEditorHtml}
+            onChange={handleEditorChange}
             className=""
             style={{ width: "100%", height: "90%" }}
             theme="snow"
