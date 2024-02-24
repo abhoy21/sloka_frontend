@@ -81,6 +81,11 @@ const Each_Doc_Row_Component = () => {
     }
   };
 
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setQuery(event.target.value);
+    handleSearch();
+  };
+
   useEffect(() => {
     const fetchDocuments = async () => {
       try {
@@ -119,7 +124,7 @@ const Each_Doc_Row_Component = () => {
         <input
           type="text"
           placeholder="Search..."
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={handleChange}
           onKeyDown={handleKeyPress}
           className="flex-grow px-5 text-base bg-transparent outline-none"
         />

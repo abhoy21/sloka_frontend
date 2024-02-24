@@ -7,7 +7,7 @@ import Footer from "./_components/footer";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="min-h-full">
       <div className="pb-10 px-4 md:px-10 flex flex-col justify-center md:flex-row md:justify-center">
         <CalenderComponent />
         <AddNoteComponent />
